@@ -13,7 +13,7 @@ import type {
 // ----------------------------------------------------------
 
 export const siteConfig: SiteConfig = {
-	title: "fishcpy的小破站",
+	title: "Allen2030's Blog",
 	subtitle: "",
 	lang: "zh_CN", // 可选值: 'en', 'zh_CN', 'zh_TW', 'ja', 'ko', 'es', 'th'
 	themeColor: {
@@ -139,7 +139,7 @@ export const navBarConfig: NavBarConfig = {
 				},
 				{
 					name: "主页",
-					url: "https://www.fis.ink",
+					url: "https://blog.allen2030.com",
 					external: true,
 					icon: "material-symbols:home",
 				},
@@ -167,8 +167,8 @@ export const navBarConfig: NavBarConfig = {
 
 export const profileConfig: ProfileConfig = {
 	avatar: "https://www.fis.ink/img/logo.png", // 相对于/src目录的路径。如果以'/'开头则表示相对于/public目录
-	name: "fishcpy",
-	bio: "非淡泊无以明志，非宁静无以致远",
+	name: "Allen2030",
+	bio: "小猪!🐷Aya~",
 	links: [
 		{
 			name: "Rss",
@@ -181,12 +181,12 @@ export const profileConfig: ProfileConfig = {
 		{
 			name: "Steam",
 			icon: "fa6-brands:steam",
-			url: "https://steamcommunity.com/id/fishcpy",
+			url: "https://steamcommunity.com/id/duancy2014",
 		},
 		{
 			name: "GitHub",
 			icon: "fa6-brands:github",
-			url: "https://github.com/fishcpy",
+			url: "https://github.com/duancyblog",
 		},
 	],
 	showStats: true, // 统计信息总开关
@@ -217,10 +217,10 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 
 export const commentConfig: CommentConfig = {
 	enable: true,
-	type: "artalk",
+	type: "twikoo",
 	twikoo: {
 		envId:
-			"https://fishcpy-cloud-twkioo-1-2-3-4-5-6-7-8-9-10-11-12-13.fis.ink/",
+			"https://twikoo.allen2030.com/",
 	},
 	artalk: {
 		server: "https://artalk.fis.ink",
