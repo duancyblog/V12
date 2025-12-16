@@ -64,7 +64,6 @@
 		"typescript": "^5.9.3",
 		"unist-util-visit": "^5.0.0",
 		"a-css-parser": "https://github.com/ramya-rao/a-css-parser.git"
-}
 	},
 	"devDependencies": {
 		"@astrojs/ts-plugin": "^1.10.5",
