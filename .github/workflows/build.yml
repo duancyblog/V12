@@ -19,7 +19,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20  # 推荐 20.x
-          cache: 'pnpm''
+          cache: 'pnpm'  # 缓存依赖，加速安装
 
       # 3. 安装依赖（解决权限问题的关键步骤）
       - name: Install dependencies
@@ -36,4 +36,3 @@ jobs:
         with:
           name: astro-dist
           path: ./dist  # 上传构建产物
-
