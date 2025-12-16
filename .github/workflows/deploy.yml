@@ -1,4 +1,4 @@
-name: Deploy to Blog Branch
+name: Deploy to Page Branch
 
 on:
   # 每次推送到 `main` 分支时触发这个"工作流程"
@@ -36,9 +36,10 @@ jobs:
       - name: Build site
         run: pnpm run build
       
-      - name: Deploy to blog branch
+      - name: Deploy to page branch
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: blog # 部署到blog分支
+          branch: page  #page部署
           folder: dist # Astro默认构建输出目录
+
           clean: true # 清理目标分支中的旧文件
