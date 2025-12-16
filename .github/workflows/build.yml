@@ -42,11 +42,11 @@ jobs:
       - name: Build Astro site
         run: pnpm run build  # 等价于 astro build，输出到 dist
 
-      # 5. 保存 dist 为 artifact（可选，方便下载查看）
-      - name: Upload dist as artifact
-        uses: actions/upload-artifact@v4
+      # 5. 推送到 page 分支
+      - name: Deploy to page branch
+        uses: peaceiris/actions-gh-pages@v4  # 第三方 Action，简化推送流程
         with:
-          name: astro-dist
-          path: ./dist  # 上传构建产物
-
-
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 自动生成的临时令牌，有仓库操作权限
+          publish_dir: ./dist  # 要推送的目录（Astro 构建产物）
+          publish_branch: page  # 目标分支（page 分支）
+          force_orphan: true  # 强制创建孤儿分支（只保留 dist 内容，可选）
