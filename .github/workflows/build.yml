@@ -1,0 +1,38 @@
+name: Build Astro dist
+
+on:
+  push:
+    branches: [main]  # 推送到 main 分支时触发
+  pull_request:
+    branches: [main]  # 拉取请求时也触发（可选）
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 拉取代码
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. 安装 Node.js（Astro 要求 Node.js 18+）
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20  # 推荐 20.x
+          cache: 'npm'  # 缓存依赖，加速安装
+
+      # 3. 安装依赖（解决权限问题的关键步骤）
+      - name: Install dependencies
+        run: npm install
+        # 若使用 pnpm/yarn，替换为 pnpm install 或 yarn install
+
+      # 4. 构建项目，生成 dist 目录
+      - name: Build Astro site
+        run: npm run build  # 等价于 astro build，输出到 dist
+
+      # 5. 保存 dist 为 artifact（可选，方便下载查看）
+      - name: Upload dist as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: astro-dist
+          path: ./dist  # 上传构建产物
