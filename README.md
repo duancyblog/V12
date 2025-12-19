@@ -1,4 +1,4 @@
-# 🐟 fishcpy 主题
+# 🐷 AllenBlog 主题
 ![Node.js >= 20](https://img.shields.io/badge/node.js-%3E%3D20-brightgreen) 
 ![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue) 
 
@@ -21,7 +21,7 @@
 - [x] [Markdown扩展功能](https://github.com/saicaca/fuwari?tab=readme-ov-file#-markdown-extended-syntax)
 - [x] 目录功能
 - [x] RSS订阅源
-- [x] Twikoo与artalk评论区
+- [x] Twikoo与Artalk评论区
 
 ## ⚡ 命令列表
 
@@ -43,4 +43,4 @@
 
 基于 [Fuwari](https://github.com/saicaca/fuwari) 修改而来。
 
-请完成必要的配置与修改后再部署项目，**不得使用“fishcpy”相关名称、Logo建立“镜像”网站或照搬文章内容而不标注来源**，否则我将设法与你联系。
+请完成必要的配置与修改后再部署项目，**不得使用“Allen2030”相关名称、Logo建立“镜像”网站或照搬文章内容而不标注来源**，否则我将设法与你联系。
