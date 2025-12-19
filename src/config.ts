@@ -55,7 +55,7 @@ export const siteConfig: SiteConfig = {
 	favicon: [
 		// 保留空数组则使用默认favicon
 		{
-			src: "https://www.fis.ink/img/logo_c.png", // favicon路径，相对于/public目录
+			src: "http://124.220.51.90:40027/i/2025/12/19/69452357ada82.png", // favicon路径，相对于/public目录
 			//theme: 'light',              // (可选) 'light'或'dark'，仅在为浅色和深色模式设置了不同favicon时使用
 			//sizes: '32x32',              // (可选) favicon尺寸，仅在设置了不同尺寸的favicon时使用
 		},
@@ -166,7 +166,7 @@ export const navBarConfig: NavBarConfig = {
 // ----------------------------------------------------------
 
 export const profileConfig: ProfileConfig = {
-	avatar: "https://www.fis.ink/img/logo.png", // 相对于/src目录的路径。如果以'/'开头则表示相对于/public目录
+	avatar: "https://img.scdn.io/i/69451d727217f_1766137202.png", // 相对于/src目录的路径。如果以'/'开头则表示相对于/public目录
 	name: "Allen2030",
 	bio: "小猪!🐷Aya~",
 	links: [
@@ -336,14 +336,14 @@ export const sidebarConfig: SidebarConfig = {
 		profile: true, // 个人资料卡片
 		categories: true, // 分类卡片
 		tags: true, // 标签卡片
-		hitokoto: true, // 一言卡片
-		advertisement: true, // 广告卡片
+		hitokoto: false, // 一言卡片
+		advertisement: false, // 广告卡片
 	},
 	advertisement: {
 		src: "https://cdn.fis.ink/img/2025/04/19/680346cf235f8.png", // 广告图片链接
 		url: "https://cloud.zyidc.net/aff/MYIMKXBB", // 广告跳转链接
 		alt: "广告", // 图片alt文本
-		showLabel: true, // 是否显示广告标识
+		showLabel: false, // 是否显示广告标识
 		labelText: "广告", // 广告标识文本
 	},
 };
