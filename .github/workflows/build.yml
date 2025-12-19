@@ -43,6 +43,7 @@ jobs:
         run: |
           pnpm run build  # 等价于 astro build，输出到 dist
           git commit -m "⏱️ $(date +"%Y年%m月%d日-%H时%M分") GitHub Actions定时更新"
+          git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:page
 
       # 5. 推送到 page 分支
       - name: Deploy to page branch
@@ -52,4 +53,5 @@ jobs:
           publish_dir: ./dist  # 要推送的目录（Astro 构建产物）
           publish_branch: page  # 目标分支（page 分支）
           force_orphan: true  # 强制创建孤儿分支（只保留 dist 内容，可选）
+
 
