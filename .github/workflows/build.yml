@@ -1,10 +1,12 @@
-name: Build Astro dist
+name: Build Astro dist file
 
 on:
   push:
     branches: [main]  # 推送到 main 分支时触发
   pull_request:
     branches: [main]  # 拉取请求时也触发（可选）
+  schedule:
+    - cron: "0 1 * * *"
 
 jobs:
   build:
@@ -50,6 +52,7 @@ jobs:
           publish_dir: ./dist  # 要推送的目录（Astro 构建产物）
           publish_branch: page  # 目标分支（page 分支）
           force_orphan: true  # 强制创建孤儿分支（只保留 dist 内容，可选）
+
 
 
 
